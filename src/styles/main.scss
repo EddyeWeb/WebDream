@@ -1,0 +1,22 @@
+// Mains
+@import 'fonts';
+
+// Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Variables
+@import 'variables';
+
+// Contents
+@import 'contents';
+@import 'header';
+@import 'landing';
+@import 'footer';
+
+// Elements
+@import 'buttons';
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: $bg-color;
+}

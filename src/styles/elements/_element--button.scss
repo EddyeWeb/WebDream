@@ -9,9 +9,21 @@
   color: $color-white;
   border-radius: 10px;
   border: 0;
-  padding: $rem20 $rem50;
+  padding: $rem20 $rem50 $rem20 $rem20 * 3.5;
+  position: relative;
 
   &:before {
     content: url(../images/icons/icon--heart.svg);
+    position: absolute;
+    left: 30px;
+    top: 16px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  &:hover {
+    &:before {
+      filter: brightness(0%);
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
   }
 }

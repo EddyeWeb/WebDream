@@ -1,19 +1,41 @@
-header
+header.site-header
   .row
     .col-sm.col-xs-12
       a.logo(href="/")
         img(src="../public/images/logo.svg")
     .col-sm.col-xs-12
-      .row
+      .row.only-desktop
         .col-sm.col-xs-12
-          p.mail
-            a(href="mailto:info@peldaemail.hu") info@peldaemail.hu
-          p.phone
-            | +36 00 000 0000
+          //-
+            p.mail
+              a(href="mailto:info@peldaemail.hu") info@peldaemail.hu
+            p.phone
+              | +36 00 000 0000
         .col-sm.col-xs-12
-          .social
-            a.facebook(href="javascript:void(0);") asdf
-            a.instagram(href="javascript:void(0);") asdf
-          .lang
-            p asdf
+          //-
+            .social
+              a.facebook(href="javascript:void(0);") asdf
+              a.instagram(href="javascript:void(0);") asdf
+            .lang
+              p asdf
           button.btn Ajánlatkérő lista
+
+    .mobile.only-mobile
+      .hamburger-menu
+        .bar
+    nav.mobile-nav.hide.only-mobile
+      ul.navbar-nav
+        li.nav-item
+          a.nav-link(href='#') Helyszínek
+        li.nav-item
+          a.nav-link(href='#') Adatvédelmi szabályzat
+        li.nav-item
+          a.nav-link(href='#') Általános szerződési feltételek
+
+script.
+
+  $('.hamburger-menu').on('click', function() {
+    $('.bar').toggleClass('animate');
+    var mobileNav = $('.mobile-nav');
+    mobileNav.toggleClass('hide show');
+  });

@@ -3,10 +3,95 @@
 .content {
   padding: $rem100 0 $rem100 * 2;
 
-  h2 {
-    @include gradient-color;
-    font-size: 24px;
-    font-weight: 700;
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    align-items: stretch;
+    height: 100%;
+
+    h2 {
+      @include gradient-color;
+      font-size: 24px;
+      font-weight: 700;
+      display: inline-block; // for the gradient effect
+      margin-bottom: $rem20;
+    }
+
+    &__inner {
+      position: relative;
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: $rem20 * 2;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 270px;
+        background-color: $color-blue;
+        position: absolute;
+        top: 0;
+        left: 45%;
+
+        @include media-breakpoint-down(lg) {
+          left: 48%;
+          height: 300px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          left: 40%;
+          height: 240px;
+        }
+      }
+
+      &--line {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 0 $rem20 * 1.25 $rem20 * 3;
+        position: relative;
+
+        @include media-breakpoint-down(sm) {
+          padding: 0 0 $rem20;
+        }
+
+        &:before {
+          content: url(../images/icons/icon--gps.svg);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $color-dk-blue;
+          border-radius: 100%;
+          width: 42px;
+          height: 42px;
+          padding-top: 7px; // Centering
+          position: absolute;
+          top: -11px;
+          left: 0;
+
+          @include media-breakpoint-down(sm) {
+            display: none;
+          }
+        }
+
+        p {
+          flex: 1;
+
+          b {
+            @include gradient-color;
+            display: inline-block; // for the gradient effect
+          }
+        }
+
+        span {
+          flex: 1;
+          @include gradient-color;
+          display: inline-block; // for the gradient effect
+        }
+      }
+    }
   }
 
   .map {

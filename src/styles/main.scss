@@ -23,6 +23,7 @@
 
 // Elements
 @import 'elements/element--button';
+@import 'elements/element--mobile-nav';
 
 body {
   font-family: $main-font;
@@ -41,5 +42,19 @@ ul {
     list-style: none;
     padding: 0;
     margin: 0;
+  }
+}
+
+.only-mobile {
+  display: none;
+}
+
+@include media-breakpoint-down(md) {
+  .only-desktop {
+    display: none;
+  }
+
+  .only-mobile {
+    display: block;
   }
 }

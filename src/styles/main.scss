@@ -6,18 +6,40 @@
 @import 'fonts';
 
 // Variables
-@import 'variables';
+@import 'variables/variables--colors';
+@import 'variables/variables--fonts';
+@import 'variables/variables--sizes';
+
+// Mixins
+@import 'mixins/mixin--gradient';
+
+// Layout
+@import 'layouts/layout';
 
 // Contents
-@import 'contents';
-@import 'header';
-@import 'landing';
-@import 'footer';
+@import 'contents/content--main';
+@import 'contents/content--footer';
+@import 'contents/content--header';
 
 // Elements
-@import 'buttons';
+@import 'elements/element--button';
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: $bg-color;
+  font-family: $main-font;
+  background-color: $color-white;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 }

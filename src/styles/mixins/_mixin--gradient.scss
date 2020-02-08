@@ -1,0 +1,13 @@
+// Gradient mixin
+
+@mixin gradient-bg {
+  background: $gradient-bg;
+  background-blend-mode: $gradient-blend;
+  mix-blend-mode: $gradient-mix;
+}
+
+@mixin gradient-color {
+  background: linear-gradient(149.47deg, #3D50BD 16.64%, #06A6EC 83.39%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

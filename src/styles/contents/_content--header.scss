@@ -1,0 +1,10 @@
+// Header
+
+header {
+  padding: $rem20;
+  border-bottom: 1px solid $color-dk-grey;
+
+  .logo {
+    display: inline-block;
+  }
+}

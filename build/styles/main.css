@@ -4,7 +4,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -7290,15 +7290,147 @@ template {
 [hidden] {
   display: none !important; }
 
-.container {
-  width: 1280px;
-  margin: 0 auto; }
-  @media (max-width: 991.98px) {
-    .container {
-      width: 100%;
-      max-width: 100%;
-      padding: 0 2em; } }
+body {
+  display: grid;
+  grid-template-areas: "header header" "main main" "footer footer";
+  grid-template-rows: 100px 1fr auto 70px;
+  grid-template-columns: 50% 50%;
+  grid-row-gap: 0;
+  grid-column-gap: 0;
+  height: 100vh;
+  margin: 0;
+  background-color: #e5e5e5; }
+
+header {
+  grid-area: header; }
+
+main {
+  grid-area: main; }
+
+footer {
+  grid-area: footer; }
+
+.content {
+  padding: 6.25em 0 12.5em; }
+  .content h2 {
+    background: linear-gradient(149.47deg, #3D50BD 16.64%, #06A6EC 83.39%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
+    font-weight: 700; }
+  .content .map img {
+    display: block;
+    width: 100%; }
+
+.footer {
+  background-color: #3355d9;
+  color: #fff;
+  padding-top: 6em; }
+  @media (max-width: 767.98px) {
+    .footer {
+      text-align: center; }
+      .footer .col-sm-12 {
+        margin-bottom: 2.5em; } }
+  .footer h3 {
+    color: #07aef8;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 1.625em; }
+    @media (max-width: 767.98px) {
+      .footer h3 {
+        padding-bottom: 0; } }
+    .footer h3:after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 50px;
+      background-color: #07aef8;
+      margin-top: 1.625em; }
+      @media (max-width: 767.98px) {
+        .footer h3:after {
+          display: none; } }
+  .footer p {
+    font-size: 14px; }
+  .footer a {
+    color: #fff; }
+  .footer ul {
+    font-size: 14px; }
+    .footer ul.contact li {
+      padding-left: 1.875em;
+      position: relative; }
+      @media (max-width: 767.98px) {
+        .footer ul.contact li {
+          padding-left: 0; } }
+      .footer ul.contact li:before {
+        position: absolute;
+        left: 0; }
+        @media (max-width: 767.98px) {
+          .footer ul.contact li:before {
+            display: none; } }
+    .footer ul.social li {
+      display: inline-block; }
+      .footer ul.social li a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #193dc9;
+        border-radius: 100%;
+        width: 53px;
+        height: 53px; }
+        .footer ul.social li a img {
+          filter: brightness(0) invert(1); }
+    .footer ul li {
+      padding-bottom: 1.875em; }
+      @media (max-width: 767.98px) {
+        .footer ul li {
+          padding-bottom: 0.625em; } }
+      .footer ul li.mail:before {
+        content: url(../images/icons/icon--mail.svg);
+        filter: brightness(0) invert(1); }
+      .footer ul li.phone:before {
+        content: url(../images/icons/icon--phone.svg);
+        filter: brightness(0) invert(1); }
+      .footer ul li.address:before {
+        content: url(../images/icons/icon--gps.svg); }
+  .footer__bottom {
+    border-top: 1px solid #07aef8;
+    text-align: center;
+    padding: 1.625em 0;
+    margin-top: 5.313em; }
+
+header {
+  padding: 1.25em;
+  border-bottom: 1px solid #7d7d7d; }
+  header .logo {
+    display: inline-block; }
+
+.btn {
+  background: linear-gradient(158.51deg, #3D50BD 16.64%, #06A6EC 83.39%);
+  background-blend-mode: hard-light;
+  mix-blend-mode: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 10px;
+  border: 0;
+  padding: 1.25em 3.125em; }
+  .btn:before {
+    content: url(../images/icons/icon--heart.svg); }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #f3f3f3; }
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff; }
+
+p {
+  margin: 0; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+  ul li {
+    list-style: none;
+    padding: 0;
+    margin: 0; }

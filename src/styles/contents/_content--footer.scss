@@ -1,0 +1,127 @@
+// Footer
+
+.footer {
+  background-color: $color-md-blue;
+  color: $color-white;
+  padding-top: $rem96;
+
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+
+    .col-sm-12 {
+      margin-bottom: $rem20 * 2;
+    }
+  }
+
+  h3 {
+    color: $color-blue;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: $rem26;
+
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 0;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 50px;
+      background-color: $color-blue;
+      margin-top: $rem26;
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  a {
+    color: $color-white;
+  }
+
+  ul {
+    font-size: 14px;
+
+    &.contact {
+      li {
+        padding-left: $rem20 * 1.5;
+        position: relative;
+
+        @include media-breakpoint-down(sm) {
+          padding-left: 0;
+        }
+
+        &:before {
+          position: absolute;
+          left: 0;
+
+          @include media-breakpoint-down(sm) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &.social {
+      li {
+        display: inline-block;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $color-dk-blue;
+          border-radius: 100%;
+          width: 53px;
+          height: 53px;
+
+          img {
+            filter: brightness(0) invert(1);
+          }
+        }
+      }
+    }
+
+    li {
+      padding-bottom: $rem20 * 1.5;
+
+      @include media-breakpoint-down(sm) {
+        padding-bottom: $rem20 / 2;
+      }
+
+      &.mail {
+        &:before {
+          content: url(../images/icons/icon--mail.svg);
+          filter: brightness(0) invert(1);
+        }
+      }
+
+      &.phone {
+        &:before {
+          content: url(../images/icons/icon--phone.svg);
+          filter: brightness(0) invert(1);
+        }
+      }
+
+      &.address {
+        &:before {
+          content: url(../images/icons/icon--gps.svg);
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid $color-blue;
+    text-align: center;
+    padding: $rem26 0;
+    margin-top: $rem85;
+  }
+}

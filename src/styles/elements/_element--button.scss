@@ -1,0 +1,17 @@
+// Button
+
+.btn {
+  @include gradient-bg;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: $color-white;
+  border-radius: 10px;
+  border: 0;
+  padding: $rem20 $rem50;
+
+  &:before {
+    content: url(../images/icons/icon--heart.svg);
+  }
+}
